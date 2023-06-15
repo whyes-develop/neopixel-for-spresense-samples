@@ -1,0 +1,26 @@
+
+config NEOPIXEL-FOR-SPRESENSE-SAMPLES_SIMPLE_LIGHT
+	tristate "NeoPixel simple light sample"
+	default n
+	depends on EXTERNALS_NEOPIXEL
+	---help---
+		Enable the simple_light app
+
+if NEOPIXEL-FOR-SPRESENSE-SAMPLES_SIMPLE_LIGHT
+
+config NEOPIXEL-FOR-SPRESENSE-SAMPLES_SIMPLE_LIGHT_PROGNAME
+	string "Program name"
+	default "simple_light"
+	---help---
+		This is the name of the program that will be use when the NSH ELF
+		program is installed.
+
+config NEOPIXEL-FOR-SPRESENSE-SAMPLES_SIMPLE_LIGHT_PRIORITY
+	int "simple_light task priority"
+	default 100
+
+config NEOPIXEL-FOR-SPRESENSE-SAMPLES_SIMPLE_LIGHT_STACKSIZE
+	int "simple_light stack size"
+	default 2048
+
+endif
