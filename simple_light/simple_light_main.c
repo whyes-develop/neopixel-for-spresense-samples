@@ -7,12 +7,17 @@
 
 int main(int argc, FAR char *argv[])
 {
+
+/* Adjust the pin number and number of pixels
+ * according to your environment.
+ */
+#define PIN_NO   (PIN_PWM0)
 #define N_PIXELS (12)
 
   neopixel_client_t *client = NULL;
   neopixel_color_t   color = {255, 255, 255};
 
-  client = neopixel_inizialize(PIN_PWM0, N_PIXELS);
+  client = neopixel_inizialize(PIN_NO, N_PIXELS);
 
   neopixel_setall(client, &color);
 
